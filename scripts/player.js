@@ -20,10 +20,6 @@ let gameStarted = false;
 
 function startTheGame() {
 
-    // GAME MENU CONTROLS
-    startButton.disabled = true;
-    restartButton.disabled = false;
-
     // GAME MENU
     gameMenu.classList.remove('game-menu-active');
     // STARTING THE GAME
@@ -78,6 +74,10 @@ function checkIfThePlayerWon() {
 
             // 
             gameMenu.classList.add('game-menu-active');
+
+            // GAME MENU CONTROLS
+            startButton.disabled = true;
+            restartButton.disabled = false;
         } else {
             playerMoveCounter = 0;
             playersMoves = '';
