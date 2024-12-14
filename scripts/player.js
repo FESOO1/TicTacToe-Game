@@ -1,6 +1,5 @@
 let playerWonCounter = 0;
 let tiesCounter = 0;
-let ComputerWonCounter = 0;
 const playerWonText = document.getElementById('playerWonText');
 const replayButton = document.querySelector('#replayButton');
 const gameMenu = document.querySelector('.game-menu');
@@ -63,7 +62,6 @@ for (let i = 0; i < gridButtonItself.length; i++) {
     });
 };
 
-
 // CHECK IF THE GAME IS WON
 
 function checkIfThePlayerWon() {
@@ -96,7 +94,6 @@ function checkIfThePlayerWon() {
         };
     };
 };
-
 
 // RESTART THE GAME
 
