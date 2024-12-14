@@ -38,7 +38,7 @@ for (let i = 0; i < gridButtonItself.length; i++) {
         gridButtonItself[i].textContent = 'X';
         playersMoves = playersMoves + gridButtonItself[i].value;
         // CHANGING THE TURN
-        isXsTurn = false;
+        isXsTurn = false; 
         changeTheTurn();
         // MAKING IT UNCLICKABLE
         gridButtonItself[i].classList.add('game-itself-grid-itself-clicked');
@@ -56,8 +56,6 @@ for (let i = 0; i < gridButtonItself.length; i++) {
 function checkIfThePlayerWon() {
     // WE WILL CHECK IF THE PLAYER HAS CLICKED THREE TIMES
     if (playerMoveCounter === 3) {
-        isXsTurn = true;
-        changeTheTurn();
         // IF SO, WE WILL CHECK IF THE PLAYER HAS WON THE GAME
         if (winningMoves.includes(playersMoves)) {
             // HERE WE WILL SHOW A TEXT THAT SHOWS A MESSAGE TO TELL THAT THE PLAYER HAS WON THE GAME.
