@@ -13,15 +13,20 @@ const winningMoves = [
     '357', '375', '537', '573', '735', '753'  // Diagonal 2
 ];
 let playerMoveCounter = 0;
+let gameStarted = false;
 
 // START THE GAME
 
 function startTheGame() {
     
     gameMenu.classList.remove('game-menu-active');
-    //
-    isXsTurn = true;
-    changeTheTurn();
+    // STARTING THE GAME
+    gameStarted = true;
+    // CHANGING THE TURN
+    setTimeout(() => {
+        isXsTurn = true;
+        changeTheTurn();
+    }, 200);
 };
 
 // PLAYER PLAYING
@@ -34,7 +39,7 @@ for (let i = 0; i < gridButtonItself.length; i++) {
         isXsTurn = false;
         changeTheTurn();
         // MAKING IT UNCLICKABLE
-        gridButtonItself[i].disabled = true;
+        gridButtonItself[i].classList.add('game-itself-grid-itself-clicked');
         // INCREMENTING BY ONE
         playerMoveCounter++;
 
@@ -60,8 +65,12 @@ function checkIfThePlayerWon() {
 
             for (const gridButtonItselfs of gridButtonItself) {
                 gridButtonItselfs.textContent = '';
-                gridButtonItselfs.disabled = true;
+                gridButtonItselfs.classList.remove('game-itself-grid-itself-clicked');
             };
+
+            gameStarted = false;
+
+            changeTheTurn();
         } else {
             playerMoveCounter = 0;
             playersMoves = '';
