@@ -104,6 +104,7 @@ function restartTheGame() {
     playerMoveCounter = 0;
     playersMoves = '';
     playersMovesAll = '';
+    
     // RESETTING EVERYTHING COMPUTER
     computerMoveCounter = 0;
     computersMoves = '';
@@ -112,6 +113,7 @@ function restartTheGame() {
     // GAME STARTED TRUE
     gameStarted = true;
 
+    // 
     for (const gridButtonItselfs of gridButtonItself) {
         gridButtonItselfs.textContent = '';
         gridButtonItselfs.classList.remove('game-itself-grid-itself-clicked');
