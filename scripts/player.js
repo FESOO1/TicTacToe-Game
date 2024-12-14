@@ -65,7 +65,10 @@ function checkIfThePlayerWon() {
     if (playerMoveCounter === 3) {
         // IF SO, WE WILL CHECK IF THE PLAYER HAS WON THE GAME
         if (winningMoves.includes(playersMoves)) {
-            // 
+            // HERE WE WILL SHOW A TEXT THAT SHOWS A MESSAGE TO TELL THAT THE PLAYER HAS WON THE GAME.
+            alert('Game has been won.');
+
+            // MAKING THE MENU APPEAR
             gameMenu.classList.add('game-menu-active');
 
             // GAME MENU CONTROLS
@@ -82,9 +85,6 @@ function checkIfThePlayerWon() {
 // RESTART THE GAME
 
 function restartTheGame() {
-    // HERE WE WILL SHOW A TEXT THAT SHOWS A MESSAGE TO TELL THAT THE PLAYER HAS WON THE GAME.
-    alert('Game has been won.');
-
     // RESETTING EVERYTHING
     playerMoveCounter = 0;
     playersMoves = '';
@@ -96,6 +96,9 @@ function restartTheGame() {
         gridButtonItselfs.textContent = '';
         gridButtonItselfs.classList.remove('game-itself-grid-itself-clicked');
     };
+
+    // MAKING THE MENU DISAPPEAR
+    gameMenu.classList.remove('game-menu-active');
 };
 
 // INITIALIZING BUTTONS
