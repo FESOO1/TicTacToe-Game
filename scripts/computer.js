@@ -5,7 +5,7 @@ let computerMove;
 let computerInterval;
 
 function computersTurn() {
-    computerMove = Math.floor(Math.random() * gridButtonItself.length)
+    computerMove = Math.floor(Math.random() * gridButtonItself.length);
 
     gridButtonItself[computerMove].textContent = '0';
     computersMoves = computersMoves + gridButtonItself[computerMove].value;
@@ -15,4 +15,8 @@ function computersTurn() {
     // CHANGING THE TURN
     isXsTurn = true;
     changeTheTurn();
+
+    if (playersMovesAll.includes(computerMove)) {
+        console.log('I am working!');
+    };
 };

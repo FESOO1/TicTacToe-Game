@@ -3,7 +3,7 @@ const startButton = document.getElementById('startButton');
 const restartButton = document.getElementById('restartButton');
 const gridButtonItself = document.querySelectorAll('.game-itself-grid-itself');
 let playersMoves = '';
-let playersMovesAll = '';
+let playersMovesAll = [];
 const winningMoves = [
     '123', '132', '213', '231', '312', '321', // Row 1
     '456', '465', '546', '564', '645', '654', // Row 2
@@ -41,11 +41,14 @@ for (let i = 0; i < gridButtonItself.length; i++) {
         gridButtonItself[i].textContent = 'X';
         playersMoves = playersMoves + gridButtonItself[i].value;
         playersMovesAll = playersMovesAll + gridButtonItself[i].value;
+        
         // CHANGING THE TURN
         isXsTurn = false; 
         changeTheTurn();
+
         // MAKING IT UNCLICKABLE
         gridButtonItself[i].classList.add('game-itself-grid-itself-clicked');
+        
         // INCREMENTING BY ONE
         playerMoveCounter++;
 
