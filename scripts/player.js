@@ -126,7 +126,6 @@ startButton.addEventListener('click', startTheGame);
 restartButton.addEventListener('click', restartTheGame);
 replayButton.addEventListener('click', restartTheGame);
 
-
 // LOCAL STORAGE
 
 function displayHowManyTimesPlayerHasWon() {
