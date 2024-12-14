@@ -74,6 +74,9 @@ function checkIfThePlayerWon() {
             // GAME MENU CONTROLS
             startButton.disabled = true;
             restartButton.disabled = false;
+
+            // GAME STARTED FALSE
+            gameStarted = false;
         } else {
             playerMoveCounter = 0;
             playersMoves = '';
@@ -94,7 +97,7 @@ function restartTheGame() {
     computersMoves = '';
     computersMovesAll = '';
 
-    // 
+    // GAME STARTED TRUE
     gameStarted = true;
 
     for (const gridButtonItselfs of gridButtonItself) {
