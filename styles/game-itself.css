@@ -4,7 +4,7 @@
     width: 500px;
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 25px;
 }
 
 /* GAME ITSELF TOP */
@@ -98,4 +98,35 @@
 
 .game-itself-grid-itself:active {
     background-color: rgb(40,40,40);
+}
+
+/* 
+
+    GAME ITSELF BOTTOM
+    
+*/
+
+.game-itself-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+}
+
+.game-itself-bottom-inner {
+    padding-block: 5px;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.game-itself-bottom-inner-subheader {
+    color: white;
+    font-weight: 300;
+}
+
+.game-itself-bottom-inner-number {
+    color: white;
 }

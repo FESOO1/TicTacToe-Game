@@ -1,3 +1,7 @@
+let playerWonCounter = 0;
+let tiesCounter = 0;
+let ComputerWonCounter = 0;
+const playerWonText = document.getElementById('playerWonText');
 const gameMenu = document.querySelector('.game-menu');
 const startButton = document.getElementById('startButton');
 const restartButton = document.getElementById('restartButton');
@@ -77,6 +81,13 @@ function checkIfThePlayerWon() {
 
             // GAME STARTED FALSE
             gameStarted = false;
+
+            // ADD ONE TO PLAYER WON TEXT
+            playerWonCounter++;
+            playerWonText.textContent = playerWonCounter;
+
+            // SAVING HOW MANY TIMES A PLAYER HAS WON
+            localStorage.setItem('playerWonCounterLS', playerWonCounter);
         } else {
             playerMoveCounter = 0;
             playersMoves = '';
@@ -112,3 +123,18 @@ function restartTheGame() {
 // INITIALIZING BUTTONS
 startButton.addEventListener('click', startTheGame);
 restartButton.addEventListener('click', restartTheGame);
+
+
+
+// LOCAL STORAGE
+
+function displayHowManyTimesPlayerHasWon() {
+    const playerWonCounterLS = localStorage.getItem('playerWonCounterLS');
+
+    if (playerWonCounterLS > 0) {
+        playerWonCounter = playerWonCounterLS;
+        playerWonText.textContent = playerWonCounterLS;
+    };
+};
+
+displayHowManyTimesPlayerHasWon();
