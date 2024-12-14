@@ -63,14 +63,12 @@ function checkIfThePlayerWon() {
             playerMoveCounter = 0;
             playersMoves = '';
 
+            gameStarted = false;
+
             for (const gridButtonItselfs of gridButtonItself) {
                 gridButtonItselfs.textContent = '';
                 gridButtonItselfs.classList.remove('game-itself-grid-itself-clicked');
             };
-
-            gameStarted = false;
-
-            changeTheTurn();
 
             // 
             gameMenu.classList.add('game-menu-active');
