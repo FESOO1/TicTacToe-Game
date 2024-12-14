@@ -85,10 +85,14 @@ function checkIfThePlayerWon() {
 // RESTART THE GAME
 
 function restartTheGame() {
-    // RESETTING EVERYTHING
+    // RESETTING EVERYTHING PLAYER
     playerMoveCounter = 0;
     playersMoves = '';
     playersMovesAll = '';
+    // RESETTING EVERYTHING COMPUTER
+    computerMoveCounter = 0;
+    computersMoves = '';
+    computersMovesAll = '';
 
     gameStarted = false;
 
