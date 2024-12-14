@@ -65,21 +65,6 @@ function checkIfThePlayerWon() {
     if (playerMoveCounter === 3) {
         // IF SO, WE WILL CHECK IF THE PLAYER HAS WON THE GAME
         if (winningMoves.includes(playersMoves)) {
-            // HERE WE WILL SHOW A TEXT THAT SHOWS A MESSAGE TO TELL THAT THE PLAYER HAS WON THE GAME.
-            alert('Game has been won.');
-
-            // RESETTING EVERYTHING
-            playerMoveCounter = 0;
-            playersMoves = '';
-            playersMovesAll = '';
-
-            gameStarted = false;
-
-            for (const gridButtonItselfs of gridButtonItself) {
-                gridButtonItselfs.textContent = '';
-                gridButtonItselfs.classList.remove('game-itself-grid-itself-clicked');
-            };
-
             // 
             gameMenu.classList.add('game-menu-active');
 
@@ -93,5 +78,26 @@ function checkIfThePlayerWon() {
     };
 };
 
+
+// RESTART THE GAME
+
+function restartTheGame() {
+    // HERE WE WILL SHOW A TEXT THAT SHOWS A MESSAGE TO TELL THAT THE PLAYER HAS WON THE GAME.
+    alert('Game has been won.');
+
+    // RESETTING EVERYTHING
+    playerMoveCounter = 0;
+    playersMoves = '';
+    playersMovesAll = '';
+
+    gameStarted = false;
+
+    for (const gridButtonItselfs of gridButtonItself) {
+        gridButtonItselfs.textContent = '';
+        gridButtonItselfs.classList.remove('game-itself-grid-itself-clicked');
+    };
+};
+
 // INITIALIZING BUTTONS
 startButton.addEventListener('click', startTheGame);
+restartButton.addEventListener('click', restartTheGame);

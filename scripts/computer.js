@@ -15,8 +15,4 @@ function computersTurn() {
     // CHANGING THE TURN
     isXsTurn = true;
     changeTheTurn();
-
-    if (playersMovesAll.includes(computerMove)) {
-        console.log('I am working!');
-    };
 };
