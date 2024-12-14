@@ -43,6 +43,7 @@ startTheGame();
 
 for (let i = 0; i < gridButtonItself.length; i++) {
     gridButtonItself[i].addEventListener('click', () => {
+        // 
         gridButtonItself[i].textContent = 'X';
         playersMoves = playersMoves + gridButtonItself[i].value;
         playersMovesAll = playersMovesAll + gridButtonItself[i].value;
