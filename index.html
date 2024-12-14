@@ -13,7 +13,7 @@
         <!-- GAME ITSELF -->
         <div class="game-itself">
             <div class="game-itself-top">
-                <div class="game-itself-top-turn">X TURN</div>
+                <div class="game-itself-top-turn">TURN</div>
                 <button type="button" class="game-itself-top-reset-button" id="replayButton">
                     <svg class="game-itself-top-reset-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
                         <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.0413 2 17.7655 3.35767 19.5996 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -23,14 +23,21 @@
                 </button>
             </div>
             <div class="game-itself-grid">
-                <button type="button" class="game-itself-grid-itself"></button>
-                <button type="button" class="game-itself-grid-itself"></button>
-                <button type="button" class="game-itself-grid-itself"></button>
-                <button type="button" class="game-itself-grid-itself"></button>
+                <button value="1" type="button" class="game-itself-grid-itself"></button>
+                <button value="2" type="button" class="game-itself-grid-itself"></button>
+                <button value="3" type="button" class="game-itself-grid-itself"></button>
+                <button value="4" type="button" class="game-itself-grid-itself"></button>
+                <button value="5" type="button" class="game-itself-grid-itself"></button>
+                <button value="6" type="button" class="game-itself-grid-itself"></button>
+                <button value="7" type="button" class="game-itself-grid-itself"></button>
+                <button value="8" type="button" class="game-itself-grid-itself"></button>
+                <button value="9" type="button" class="game-itself-grid-itself"></button>
             </div>
             <div class="game-itself-bottom"></div>
         </div>
     </div>
     
+    <script src="./scripts/turn.js"></script>
+    <script src="./scripts/player.js"></script>
 </body>
 </html>
