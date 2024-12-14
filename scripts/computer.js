@@ -48,8 +48,8 @@ function checkIfTheComputerWon() {
             // SAVING HOW MANY TIMES A PLAYER HAS WON
             localStorage.setItem('playerWonCounterLS', playerWonCounter);
         } else {
-            playerMoveCounter = 0;
-            playersMoves = '';
+            computerMoveCounter = 0;
+            computersMoves = '';
         };
     };
 };
