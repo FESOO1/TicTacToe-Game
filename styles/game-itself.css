@@ -1,0 +1,57 @@
+/* GAME ITSELF */
+
+.game-itself {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+/* GAME ITSELF TOP */
+
+.game-itself-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* GAME ITSELF TOP TURN */
+
+.game-itself-top-turn {
+    color: white;
+    background-color: rgb(25,25,25);
+    padding: 5px 15px;
+    border-radius: 0.4rem;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* GAME ITSELF TOP RESET BUTTON */
+
+.game-itself-top-reset-button {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgb(30, 30, 30);
+    border-radius: 0.4rem;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.game-itself-top-reset-button-svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.game-itself-top-reset-button:hover {
+    background-color: rgb(37, 37, 37);
+}
+
+.game-itself-top-reset-button:active {
+    background-color: rgb(35, 35, 35);
+}
