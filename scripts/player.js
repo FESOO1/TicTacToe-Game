@@ -1,5 +1,6 @@
 const gameMenu = document.querySelector('.game-menu');
 const startButton = document.getElementById('startButton');
+const restartButton = document.getElementById('restartButton');
 const gridButtonItself = document.querySelectorAll('.game-itself-grid-itself');
 let playersMoves = '';
 const winningMoves = [
@@ -18,7 +19,12 @@ let gameStarted = false;
 // START THE GAME
 
 function startTheGame() {
-    
+
+    // GAME MENU CONTROLS
+    startButton.disabled = true;
+    restartButton.disabled = false;
+
+    // GAME MENU
     gameMenu.classList.remove('game-menu-active');
     // STARTING THE GAME
     gameStarted = true;

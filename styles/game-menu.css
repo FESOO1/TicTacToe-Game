@@ -57,3 +57,7 @@
     transform: translateY(5px);
     box-shadow: 0 0 0 #cc8b13;
 }
+
+.game-menu-play-button:disabled {
+    display: none;
+}
