@@ -22,7 +22,7 @@ body {
 /* GAME */
 
 .game {
-    padding-block: 39px;
+    padding-block: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
