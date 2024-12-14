@@ -71,6 +71,9 @@ function checkIfThePlayerWon() {
             gameStarted = false;
 
             changeTheTurn();
+
+            // 
+            gameMenu.classList.add('game-menu-active');
         } else {
             playerMoveCounter = 0;
             playersMoves = '';
