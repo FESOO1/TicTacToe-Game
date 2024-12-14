@@ -9,6 +9,7 @@ function changeTheTurn() {
         turnText.textContent = 'X TURN';
         gameItselfGrid.classList.remove('game-itself-grid-inactive');
 
+        // 
         for (const gridButtonItselfs of gridButtonItself) {
             gridButtonItselfs.disabled = false;
         };

@@ -104,7 +104,7 @@ function restartTheGame() {
     playerMoveCounter = 0;
     playersMoves = '';
     playersMovesAll = '';
-    
+
     // RESETTING EVERYTHING COMPUTER
     computerMoveCounter = 0;
     computersMoves = '';
