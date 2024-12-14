@@ -94,7 +94,8 @@ function restartTheGame() {
     computersMoves = '';
     computersMovesAll = '';
 
-    gameStarted = false;
+    // 
+    gameStarted = true;
 
     for (const gridButtonItselfs of gridButtonItself) {
         gridButtonItselfs.textContent = '';
