@@ -1,3 +1,5 @@
+const gameMenu = document.querySelector('.game-menu');
+const startButton = document.getElementById('startButton');
 const gridButtonItself = document.querySelectorAll('.game-itself-grid-itself');
 let playersMoves = '';
 const winningMoves = [
@@ -15,11 +17,12 @@ let playerMoveCounter = 0;
 // START THE GAME
 
 function startTheGame() {
+    
+    gameMenu.classList.remove('game-menu-active');
+    //
     isXsTurn = true;
     changeTheTurn();
 };
-
-startTheGame();
 
 // PLAYER PLAYING
 
@@ -31,7 +34,7 @@ for (let i = 0; i < gridButtonItself.length; i++) {
         isXsTurn = false;
         changeTheTurn();
         // MAKING IT UNCLICKABLE
-        gridButtonItself[i].classList.add('game-itself-grid-itself-clicked');
+        gridButtonItself[i].disabled = true;
         // INCREMENTING BY ONE
         playerMoveCounter++;
 
@@ -57,15 +60,14 @@ function checkIfThePlayerWon() {
 
             for (const gridButtonItselfs of gridButtonItself) {
                 gridButtonItselfs.textContent = '';
-                gridButtonItselfs.classList.remove('game-itself-grid-itself-clicked');
+                gridButtonItselfs.disabled = true;
             };
-
-            // CHANGING THE TURN
-            isXsTurn = true;
-            changeTheTurn();
         } else {
             playerMoveCounter = 0;
             playersMoves = '';
         };
     };
 };
+
+// INITIALIZING BUTTONS
+startButton.addEventListener('click', startTheGame);

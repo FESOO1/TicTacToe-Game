@@ -11,6 +11,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.game-menu-active {
+    opacity: 1;
+    pointer-events: unset;
 }
 
 /* GAME MENU PLAY */
