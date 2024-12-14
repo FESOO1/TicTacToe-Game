@@ -2,6 +2,7 @@ let playerWonCounter = 0;
 let tiesCounter = 0;
 let ComputerWonCounter = 0;
 const playerWonText = document.getElementById('playerWonText');
+const replayButton = document.querySelector('#replayButton');
 const gameMenu = document.querySelector('.game-menu');
 const startButton = document.getElementById('startButton');
 const restartButton = document.getElementById('restartButton');
@@ -123,7 +124,7 @@ function restartTheGame() {
 // INITIALIZING BUTTONS
 startButton.addEventListener('click', startTheGame);
 restartButton.addEventListener('click', restartTheGame);
-
+replayButton.addEventListener('click', restartTheGame);
 
 
 // LOCAL STORAGE
