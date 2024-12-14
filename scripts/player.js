@@ -57,7 +57,12 @@ function checkIfThePlayerWon() {
 
             for (const gridButtonItselfs of gridButtonItself) {
                 gridButtonItselfs.textContent = '';
+                gridButtonItselfs.classList.remove('game-itself-grid-itself-clicked');
             };
+
+            // CHANGING THE TURN
+            isXsTurn = true;
+            changeTheTurn();
         } else {
             playerMoveCounter = 0;
             playersMoves = '';
